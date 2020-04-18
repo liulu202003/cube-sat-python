@@ -32,9 +32,9 @@ if __name__ == "__main__":
             print("Cycle mode on!")
     if (len(sys.argv)) > 2:
         str1 = sys.argv[2]
-        print "Str: ", str
+        u = unicode(str1, "utf-8")
 #        print ("isnumeric: ", str.isnumeric()
-        if (str(str1).isnumeric() == True):
+        if (u.isnumeric() == True):
             loop = int(sys.argv[2])
             print "Loop: ", loop
     if (len(sys.argv)) > 3:
