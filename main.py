@@ -33,7 +33,7 @@ if __name__ == "__main__":
     if (len(sys.argv)) > 2:
         str = sys.argv[2]
         print "Str: ", str
-        print ("isnumeric: ", str.isnumeric()
+#        print ("isnumeric: ", str.isnumeric()
         if (str.isnumeric() == True):
             loop = int(sys.argv[2])
             print "Loop: ", loop
