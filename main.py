@@ -32,6 +32,6 @@ if __name__ == "__main__":
 stream = os.popen('ls /dev/spidev0.* 2>&1')
 output = stream.read()
 
-print('Output: ', output)
+print 'Output: ', output
 
 
