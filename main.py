@@ -20,18 +20,26 @@ if __name__ == "__main__":
         if (('a' in sys.argv[1]) or ('afsk' in sys.argv[1])):
             mode = AFSK
             print("AFSK") 
-        if (sys.argv[1][0] == 'f'):
+        if (('f' in sys.argv[1]) or ('fsk' in sys.argv[1])):
             mode = FSK
             print("FSK") 
-        if (sys.argv[1][0] == 'b'):
+        if (('b' in sys.argv[1]) or ('bpsk' in sys.argv[1])):
             mode = BPSK
             print("BPSK")
-        if (sys.argv[1][0] == 'c'):
+        if (('c' in sys.argv[1]) or ('cycle' in sys.argv[1])):
             cycle = True 
             print("Cycle mode on!")
     if (len(sys.argv)) > 2:
         loop = int(sys.argv[2])
         print "Loop: ", loop
+    if (len(sys.argv)) > 3:
+        if (('n' in sys.argv[3]) or ('no' in sys.argv[3])):
+            cw_id = False
+            print ("No CW ID")
+        else:
+            cw_id = True
+            print ("CW ID")            
+
 #
 # check for SPI
 stream = os.popen('ls /dev/spidev0.* 2>&1')
