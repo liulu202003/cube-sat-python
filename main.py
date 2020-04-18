@@ -7,6 +7,7 @@ AFSK = 2
 
 mode = FSK
 cycle = False
+cw_id = True
 
 if __name__ == "__main__":
 #    print(f"Arguments count: {len(sys.argv)}")
@@ -17,16 +18,16 @@ if __name__ == "__main__":
     
     if (len(sys.argv)) > 1:
 #        print("There are arguments!")
-        if (('a' in sys.argv[1]) or ('afsk' in sys.argv[1])):
+        if (('a' == sys.argv[1]) or ('afsk' in sys.argv[1])):
             mode = AFSK
             print("AFSK") 
-        if (('f' in sys.argv[1]) or ('fsk' in sys.argv[1])):
+        if (('f' == sys.argv[1]) or ('fsk' in sys.argv[1])):
             mode = FSK
             print("FSK") 
-        if (('b' in sys.argv[1]) or ('bpsk' in sys.argv[1])):
+        if (('b' == sys.argv[1]) or ('bpsk' in sys.argv[1])):
             mode = BPSK
             print("BPSK")
-        if (('c' in sys.argv[1]) or ('cycle' in sys.argv[1])):
+        if (('c' == sys.argv[1]) or ('cycle' in sys.argv[1])):
             cycle = True 
             print("Cycle mode on!")
     if (len(sys.argv)) > 2:
