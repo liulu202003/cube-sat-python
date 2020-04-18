@@ -15,7 +15,7 @@ if __name__ == "__main__":
 #
     if (len(sys.argv)) > 0:
 #        print("There are arguments!")
-        if (sys.argv[1][0] == 'a'):
+        if ('a' in sys.argv[1]):
             mode = AFSK
             print("AFSK") 
         if (sys.argv[1][0] == 'f'):
@@ -32,7 +32,8 @@ if __name__ == "__main__":
 stream = os.popen('ls /dev/spidev0.* 2>&1')
 output = stream.read()
 
-print 'Output: ', 
+print 'Output: ', output
+
 # expected failure string is ls: cannot access '/dev/spidev0.*': No such file or directory
 
 if ('cannot access' in output):
