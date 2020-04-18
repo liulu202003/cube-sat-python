@@ -33,4 +33,6 @@ stream = os.popen('echo Returned output')
 output = stream.read()
 output
 
+print('Output: ', output)
+
 os.system('ls /dev/spidev0.* 2>&1')
