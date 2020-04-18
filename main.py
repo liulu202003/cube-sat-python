@@ -13,6 +13,8 @@ if __name__ == "__main__":
 #    for i, arg in enumerate(sys.argv):
 #        print(f"Argument {i:>6}: {arg}")
 #
+    print 'Length: ', len(sys.argv)
+    
     if (len(sys.argv)) > 0:
 #        print("There are arguments!")
         if ('a' in sys.argv[1]):
