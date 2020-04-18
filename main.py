@@ -1,4 +1,5 @@
 import sys
+import os
 
 FSK = 0
 BPSK = 1
@@ -26,4 +27,10 @@ if __name__ == "__main__":
         if (sys.argv[1][0] == 'c'):
             cycle = True 
             print("Cycle mode on!")
+#
+# check for SPI
+stream = os.popen('echo Returned output')
+output = stream.read()
+output
 
+os.system('ls /dev/spidev0.* 2>&1')
