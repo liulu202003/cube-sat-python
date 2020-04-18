@@ -31,8 +31,9 @@ if __name__ == "__main__":
             cycle = True 
             print("Cycle mode on!")
     if (len(sys.argv)) > 2:
-        loop = int(sys.argv[2])
-        print "Loop: ", loop
+        if sys.argv[2].isdigit:
+            loop = int(sys.argv[2])
+            print "Loop: ", loop
     if (len(sys.argv)) > 3:
         if (('n' in sys.argv[3]) or ('no' in sys.argv[3])):
             cw_id = False
