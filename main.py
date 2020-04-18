@@ -31,10 +31,10 @@ if __name__ == "__main__":
             cycle = True 
             print("Cycle mode on!")
     if (len(sys.argv)) > 2:
-        str = sys.argv[2]
+        str1 = sys.argv[2]
         print "Str: ", str
 #        print ("isnumeric: ", str.isnumeric()
-        if (str.isnumeric() == True):
+        if (str(str1).isnumeric() == True):
             loop = int(sys.argv[2])
             print "Loop: ", loop
     if (len(sys.argv)) > 3:
