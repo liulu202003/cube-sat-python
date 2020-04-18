@@ -29,10 +29,9 @@ if __name__ == "__main__":
             print("Cycle mode on!")
 #
 # check for SPI
-stream = os.popen('echo Returned output')
+stream = os.popen('ls /dev/spidev0.* 2>&1')
 output = stream.read()
-output
 
 print('Output: ', output)
 
-os.system('ls /dev/spidev0.* 2>&1')
+
