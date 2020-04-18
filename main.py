@@ -17,7 +17,7 @@ if __name__ == "__main__":
     
     if (len(sys.argv)) > 1:
 #        print("There are arguments!")
-        if ('a' in sys.argv[1] or 'afsk' in sys.argv[1]):
+        if (('a' in sys.argv[1]) or ('afsk' in sys.argv[1])):
             mode = AFSK
             print("AFSK") 
         if (sys.argv[1][0] == 'f'):
@@ -30,6 +30,8 @@ if __name__ == "__main__":
             cycle = True 
             print("Cycle mode on!")
     if (len(sys.argv)) > 2:
+        loop = int(sys.argv[2])
+        print "Loop: ", loop
 #
 # check for SPI
 stream = os.popen('ls /dev/spidev0.* 2>&1')
